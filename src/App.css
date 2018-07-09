@@ -1,0 +1,227 @@
+@keyframes fadeIn{
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes fadeOut{
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.governors {
+  text-align: center;  
+  background-size: 55px;  
+}
+
+.governors__content {
+  background: url('img/bg-gray.png');
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.governors__container {
+  width: 650px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+  padding: 20px 15px 18px;
+  border-radius: 2px;
+  background: #fff;
+  box-sizing: border-box;  
+  position: relative;
+}
+
+.governors__container.finished {
+  background: url('img/bg-saturated.png');
+}
+
+.governors__header {
+  background-color: #222;  
+  padding: 20px;
+  color: white;
+}
+
+.governors__title {
+  font-size: 1.5em;
+}
+
+.governors__cards-container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 296px;
+  margin: 0 auto;
+}
+
+.governors__moves {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.governors__card-wrapper {
+  width:25%; 
+}
+
+.governors__card-wrap {     
+  position: relative;
+  padding-bottom: 120%;
+  margin: 2.5px;
+}
+
+.governors__card,
+.governors__card--back {
+  background: url('img/back-card.png') no-repeat;  
+  background-size: 113%;
+  background-position: center;
+  backface-visibility: hidden;
+  position: absolute;
+  width:100%;
+  height:100%;
+  transition: all .6s ease;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.governors__card--back {
+  transform: rotateY(180deg);
+}
+
+.governors__card--back p {
+  margin: 0;
+  height:100%;
+  background-size: 113%;
+  background-position: center;
+}
+
+.governors__card:hover {
+  cursor: pointer;
+}
+
+.governors__card-wrapper.flipped .governors__card{
+  transform: rotateY(180deg);
+}
+
+.governors__card-wrapper.flipped .governors__card--back{
+  transform: rotateY(0deg);
+}
+
+ .governors__card-wrapper.flipped.matched .governors__card{
+  animation: fadeOut 0.3s ease;
+  animation-fill-mode: forwards;
+} 
+
+.governors__info-block {
+  position: absolute;
+  display: flex;
+  left:0;
+  top: 0px;
+  bottom: -30px;
+  width: 100%;  
+  justify-content: center;
+}
+
+.governors__info-container {
+  width: 296px;  
+  background: url('img/bg-saturated.png');    
+  padding: 15px;
+  top:-15px;
+  bottom: 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+  border: 2px solid black;
+  border-radius: 5px;
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+.governors__info-img {
+  width: 266px;  
+  height: 216px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-size: 104%;
+  background-position: center;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+.governors__info-name,
+.governors__info-subtitle {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px
+}
+
+.governors__info-name {  
+  font-size: 20px;  
+}
+
+.governors__info-subtitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.governors__info-bio {
+  font-size: 15px;
+}
+
+.governors__info-close-btn-container {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  margin-left: -15px;
+}
+
+.governors__info-close-btn {
+  width:120px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 8px 40px;
+  cursor: pointer;
+}
+
+.governors__finish-container {
+  text-align: left;
+}
+
+.governors__finish-container p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.governors__finish-text {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #FFF;
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+}
+
+.governors__play-again {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.governors__play-again span {
+  background-color: #b88b58;
+  color:#fff;
+  text-decoration: none;
+  font-size: 18px;
+  height: 42px;
+  padding: 9px 18px 7px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.2),inset 0 0 0 1px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
